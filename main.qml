@@ -7,6 +7,8 @@ Rectangle {
     height: 600
     color: "green"
 
+    signal board_init
+
     Grid {
         id: newStacks
         x: 2
@@ -17,7 +19,9 @@ Rectangle {
         columns: 2
         spacing: 10
 
-        CardHolder {}
+        CardHolder {
+            Card {}
+        }
         CardHolder {}
     }
 
