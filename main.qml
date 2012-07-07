@@ -7,6 +7,8 @@ Rectangle {
     height: 600
     color: "green"
 
+    signal cardClicked
+
     Grid {
         id: newStacks
         x: 2
@@ -35,5 +37,19 @@ Rectangle {
         CardHolder {}
         CardHolder {}
         CardHolder {}
+    }
+
+    Grid {
+        id: cards
+        x: 6
+        anchors.margins: 30
+        anchors.top: cardStacks.bottom
+        anchors.right: cardStacks.right
+        rows: 1
+        columns: 6
+        spacing: 15
+
+        CardHolder{}
+        CardHolder{}
     }
 }
