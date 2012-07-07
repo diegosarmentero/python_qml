@@ -3,13 +3,13 @@ import QtQuick 1.1
 
 Item {
     id: cardHolder
-    width: 70
-    height: 100
+    width: 79
+    height: 123
 
     Rectangle {
         id: border
         anchors.fill: parent
-        radius: 5
+        radius: 10
         color: "transparent"
         border.color: "white"
     }
@@ -32,22 +32,22 @@ Item {
         color: "transparent"
         border.color: "white"
         anchors.fill: parent
-        opacity: 0
-        radius: 5
+        opacity: 1
+        radius: 10
 
 
         states: State {
             name: "down";
             PropertyChanges {
                 target: glow;
-                opacity: 1
-                scale: 1
-                border.width: 5
+                opacity: 0
+                scale: 1.15
+                border.width: 2
             }
         }
 
         transitions: Transition {
-            from: ""; to: "down"; reversible: true
+            from: ""; to: "down";
             ParallelAnimation {
                 NumberAnimation {
                     properties: "opacity, scale";
