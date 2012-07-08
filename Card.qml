@@ -4,6 +4,7 @@ Item {
     id: card
     width: parent.width
     height: parent.height
+    property bool dragging: false
 
     Image {
         id: cardImage
@@ -16,5 +17,12 @@ Item {
         height: parent.height - 1
     }
 
+    MouseArea {
+        id: mousearea
+        hoverEnabled: true
+        anchors.fill: parent
+        drag.target: card
+        drag.axis: Drag.XandYAxis
+    }
 
 }

@@ -7,6 +7,8 @@ Rectangle {
     height: 600
     color: "green"
 
+    property int cardWidth: 79
+    property int cardHeight: 123
 
     Grid {
         id: newStacks
@@ -18,10 +20,8 @@ Rectangle {
         columns: 2
         spacing: 10
 
-        CardHolder {
-            Card {}
-        }
-        CardHolder {}
+        CardHolder {width: cardWidth; height: cardHeight}
+        CardHolder {width: cardWidth; height: cardHeight}
     }
 
     Grid {
@@ -34,10 +34,10 @@ Rectangle {
         columns: 4;
         spacing: 15
 
-        CardHolder {}
-        CardHolder {}
-        CardHolder {}
-        CardHolder {}
+        CardHolder {width: cardWidth; height: cardHeight}
+        CardHolder {width: cardWidth; height: cardHeight}
+        CardHolder {width: cardWidth; height: cardHeight}
+        CardHolder {width: cardWidth; height: cardHeight}
     }
 
     Grid {
@@ -50,7 +50,13 @@ Rectangle {
         columns: 6
         spacing: 15
 
-        CardHolder{}
-        CardHolder{}
+        CardHolder{width: cardWidth; height: cardHeight}
+        CardHolder{width: cardWidth; height: cardHeight}
+        CardHolder{width: cardWidth; height: cardHeight}
+        CardHolder{width: cardWidth; height: cardHeight}
+        CardHolder{width: cardWidth; height: cardHeight}
+        CardHolder{width: cardWidth; height: cardHeight}
     }
+
+    Card {width: cardWidth; height: cardHeight}
 }
